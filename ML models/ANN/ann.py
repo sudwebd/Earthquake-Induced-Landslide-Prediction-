@@ -29,7 +29,7 @@ ct = ColumnTransformer([('one', StandardScaler(), [17, 18, 19 ,20])], remainder=
 X_train = ct.fit_transform(X_train)
 X_test = ct.transform(X_test)
 
-# Fitting SVM to the Training set
+# Fitting ANN to the Training set
 from sklearn.neural_network import MLPClassifier
 classifier = MLPClassifier(hidden_layer_sizes=(20,20), activation='relu')
 classifier.fit(X_train, y_train)
